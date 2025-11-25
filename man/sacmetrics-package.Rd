@@ -4,12 +4,12 @@
 \name{sacmetrics-package}
 \alias{sacmetrics}
 \alias{sacmetrics-package}
-\title{sacmetrics: What the Package Does (One Line, Title Case)}
+\title{sacmetrics: Spatial Autocorrelation Metrics}
 \description{
-What the package does (one paragraph).
+Calculated various spatial autocorrelation metrics. It includes Spatially Structured Variance Ratio (SSVR) and AUC of Variogram Model.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com}
+\strong{Maintainer}: Jakub Nowosad \email{nowosad.jakub@gmail.com} (\href{https://orcid.org/0000-0002-1057-3721}{ORCID})
 
 }
 \keyword{internal}
