@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# sacmetrics
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/sacmetrics)](https://CRAN.R-project.org/package=sacmetrics)
+<!-- badges: end -->
+
+The goal of **sacmetrics** is to calculate spatial autocorrelation metrics for spatial data.
+
+## Installation
+
+You can install the development version of **sacmetrics** from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("Nowosad/sacmetrics")
+```
+
+## Example
+
+```{r}
+library(sacmetrics)
+library(gstat)
+vgm_model1 = vgm(psill = 2, model = "Sph", range = 100, nugget = 0.5)
+vgm_model2 = vgm(psill = 1.5, model = "Exp", range = 120, nugget = 0.7)
+plot(variogramLine(vgm_model1, maxdist = 300), type = "l", col = "blue",
+     xlab = "Distance", ylab = "Semivariance", main = "Variogram Models")
+lines(variogramLine(vgm_model2, maxdist = 300), col = "red")
+```
+
+```{r}
+ssvr(vgm_model1)
+ssvr(vgm_model2)
+```
+
+```{r}
+variogram_auc(vgm_model1, maxdist = 300)
+variogram_auc(vgm_model2, maxdist = 300)
+variogram_auc_compare(vgm_model1, vgm_model2, maxdist = 300)
+```
+
+## Contribution
+
+Contributions to this package are welcome -- let us know if you have any suggestions or spotted a bug. 
+The preferred method of contribution is through a GitHub pull request. 
+Feel also free to contact us by creating [an issue](https://github.com/nowosad/sacmetrics/issues).
+
+## Acknowledgments
+
+The initial development of this R package was made possible through the financial support of the European Union’s Horizon Europe research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 101147446 and further supported by the Federal Ministry for Economic Affairs and Climate Action of Germany (project No. 50EE2009).
+
+![](https://rea.ec.europa.eu/sites/default/files/styles/oe_theme_medium_2x_no_crop/public/2021-04/EN-Funded%20by%20the%20EU-POS.jpg?itok=Qx-y2s5d)
