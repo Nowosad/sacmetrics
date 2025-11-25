@@ -38,6 +38,7 @@ expect_error(
 
 # Test warning and NA return when total sill is zero
 expect_warning(
-  result <- ssvr(data.frame(model = c("Sph"), psill = c(0), range = c(100)))
+  ssvr(data.frame(model = c("Sph"), psill = c(0), range = c(100)))
 )
+result = suppressWarnings(ssvr(data.frame(model = c("Sph"), psill = c(0), range = c(100))))
 expect_true(is.na(result))
