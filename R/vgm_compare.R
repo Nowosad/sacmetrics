@@ -13,12 +13,14 @@
 #' @returns A numeric value between 0 and 1 representing the similarity of the two variogram models
 #' @export
 #'
+#' @references Poggio, L., Lassauce, A., & Gimona, A. (2019). Modelling the extent of northern peat soil and its uncertainty with sentinel: Scotland as example of highly cloudy region. Geoderma, 346, 63-74.
+#'
 #' @examples
 #' vgm_model1 = data.frame(model = c("Nug", "Sph"), psill = c(0.5, 1.5), range = c(0, 100))
 #' vgm_model2 = data.frame(model = c("Nug", "Exp"), psill = c(0.7, 1.3), range = c(0, 120))
-#' similarity = variogram_auc_compare(vgm_model1, vgm_model2)
+#' similarity = vgm_compare(vgm_model1, vgm_model2)
 #' similarity
-variogram_auc_compare = function(model1, model2, maxdist = NULL, n = 101) {
+vgm_compare = function(model1, model2, maxdist = NULL, n = 101) {
   if (n %% 2 == 0) {
     warning("n should be odd for Simpson's rule; incrementing n by 1")
     n = n + 1

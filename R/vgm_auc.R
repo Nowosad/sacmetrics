@@ -9,11 +9,13 @@
 #' @returns A numeric value representing the AUC of the variogram model.
 #' @export
 #'
+#' @references Poggio, L., Lassauce, A., & Gimona, A. (2019). Modelling the extent of northern peat soil and its uncertainty with sentinel: Scotland as example of highly cloudy region. Geoderma, 346, 63-74.
+#'
 #' @examples
 #' vgm_model = data.frame(model = c("Nug", "Sph"), psill = c(0.5, 1.5), range = c(0, 100))
-#' auc_value = variogram_auc(vgm_model)
+#' auc_value = vgm_auc(vgm_model)
 #' auc_value
-variogram_auc = function(model, maxdist = NULL, n = 101) {
+vgm_auc = function(model, maxdist = NULL, n = 101) {
   if (n %% 2 == 0) {
     warning("n must be odd for Simpson's rule; incrementing n by 1")
     n = n + 1
@@ -44,4 +46,3 @@ variogram_auc = function(model, maxdist = NULL, n = 101) {
   result = simpson_equal(xgrid, ygrid)
   return(result)
 }
-

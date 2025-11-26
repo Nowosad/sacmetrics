@@ -1,14 +1,18 @@
 simpson_equal = function(x, y) {
   # Simpson's rule for equally spaced x; x must be monotonic and equally spaced; npoints must be odd
   n = length(x)
-  if (n < 3) stop("Need at least 3 points for Simpson's rule")
+  if (n < 3) {
+    stop("Need at least 3 points for Simpson's rule")
+  }
   # check spacing
   dxs = diff(x)
   if (max(abs(dxs - dxs[1])) > 1e-8 * max(1, abs(dxs[1]))) {
     stop("simpson_equal: x is not equally spaced")
   }
   if ((n - 1) %% 2 != 0) {
-    stop("simpson_equal requires an odd number of points (even number of intervals)")
+    stop(
+      "simpson_equal requires an odd number of points (even number of intervals)"
+    )
   }
   h = dxs[1]
   # Simpson composite rule
@@ -33,7 +37,7 @@ get_variogram_curve = function(model, maxdist, n) {
   data.frame(dist = as.numeric(df$dist), gamma = as.numeric(df$gamma))
 }
 
-recreate_variogram_model = function(model){
+recreate_variogram_model = function(model) {
   if (inherits(model, "variogramModel")) {
     return(model)
   } else {

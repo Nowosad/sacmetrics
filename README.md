@@ -40,18 +40,18 @@ lines(variogramLine(vgm_model2, maxdist = 300), col = "red")
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 ``` r
-ssvr(vgm_model1)
+vgm_ssvr(vgm_model1)
 #> [1] 0.8
-ssvr(vgm_model2)
+vgm_ssvr(vgm_model2)
 #> [1] 0.6818182
 ```
 
 ``` r
-variogram_auc(vgm_model1, maxdist = 300)
+vgm_auc(vgm_model1, maxdist = 300)
 #> [1] 675.0004
-variogram_auc(vgm_model2, maxdist = 300)
+vgm_auc(vgm_model2, maxdist = 300)
 #> [1] 494.7753
-variogram_auc_compare(vgm_model1, vgm_model2, maxdist = 300)
+vgm_compare(vgm_model1, vgm_model2, maxdist = 300)
 #> [1] 0.733
 ```
 
@@ -71,3 +71,15 @@ No. 101147446 and further supported by the Federal Ministry for Economic
 Affairs and Climate Action of Germany (project No. 50EE2009).
 
 ![](https://rea.ec.europa.eu/sites/default/files/styles/oe_theme_medium_2x_no_crop/public/2021-04/EN-Funded%20by%20the%20EU-POS.jpg?itok=Qx-y2s5d)
+
+## References
+
+- Kerry, R., & Oliver, M. A. (2008). Determining nugget: sill ratios of
+  standardized variograms from aerial photographs to krige sparse soil
+  data. Precision Agriculture, 9(1), 33-56.
+- Vaysse, K., & Lagacherie, P. (2015). Evaluating digital soil mapping
+  approaches for mapping GlobalSoilMap soil properties from legacy data
+  in Languedoc-Roussillon (France). Geoderma Regional, 4, 20-30.
+- Poggio, L., Lassauce, A., & Gimona, A. (2019). Modelling the extent of
+  northern peat soil and its uncertainty with sentinel: Scotland as
+  example of highly cloudy region. Geoderma, 346, 63-74.
