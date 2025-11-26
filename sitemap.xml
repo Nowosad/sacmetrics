@@ -6,8 +6,8 @@
 <url><loc>/index.html</loc></url>
 <url><loc>/reference/index.html</loc></url>
 <url><loc>/reference/sacmetrics-package.html</loc></url>
-<url><loc>/reference/ssvr.html</loc></url>
-<url><loc>/reference/variogram_auc.html</loc></url>
-<url><loc>/reference/variogram_auc_compare.html</loc></url>
+<url><loc>/reference/vgm_auc.html</loc></url>
+<url><loc>/reference/vgm_compare.html</loc></url>
+<url><loc>/reference/vgm_ssvr.html</loc></url>
 </urlset>
 

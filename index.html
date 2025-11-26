@@ -78,20 +78,20 @@
 <span><span class="va">vgm_model1</span> <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/gstat/reference/vgm.html" class="external-link">vgm</a></span><span class="op">(</span>psill <span class="op">=</span> <span class="fl">2</span>, model <span class="op">=</span> <span class="st">"Sph"</span>, range <span class="op">=</span> <span class="fl">100</span>, nugget <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
 <span><span class="va">vgm_model2</span> <span class="op">=</span> <span class="fu"><a href="https://r-spatial.github.io/gstat/reference/vgm.html" class="external-link">vgm</a></span><span class="op">(</span>psill <span class="op">=</span> <span class="fl">1.5</span>, model <span class="op">=</span> <span class="st">"Exp"</span>, range <span class="op">=</span> <span class="fl">120</span>, nugget <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/gstat/reference/variogramLine.html" class="external-link">variogramLine</a></span><span class="op">(</span><span class="va">vgm_model1</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"l"</span>, col <span class="op">=</span> <span class="st">"blue"</span>,</span>
-<span>     xlab <span class="op">=</span> <span class="st">"Distance"</span>, ylab <span class="op">=</span> <span class="st">"Semivariance"</span>, main <span class="op">=</span> <span class="st">"Variogram Models"</span><span class="op">)</span></span>
+<span>     xlab <span class="op">=</span> <span class="st">"Distance"</span>, ylab <span class="op">=</span> <span class="st">"Semivariance"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="fu"><a href="https://r-spatial.github.io/gstat/reference/variogramLine.html" class="external-link">variogramLine</a></span><span class="op">(</span><span class="va">vgm_model2</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/ssvr.html">ssvr</a></span><span class="op">(</span><span class="va">vgm_model1</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/vgm_ssvr.html">vgm_ssvr</a></span><span class="op">(</span><span class="va">vgm_model1</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0.8</span></span>
-<span><span class="fu"><a href="reference/ssvr.html">ssvr</a></span><span class="op">(</span><span class="va">vgm_model2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/vgm_ssvr.html">vgm_ssvr</a></span><span class="op">(</span><span class="va">vgm_model2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0.6818182</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/variogram_auc.html">variogram_auc</a></span><span class="op">(</span><span class="va">vgm_model1</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/vgm_auc.html">vgm_auc</a></span><span class="op">(</span><span class="va">vgm_model1</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 675.0004</span></span>
-<span><span class="fu"><a href="reference/variogram_auc.html">variogram_auc</a></span><span class="op">(</span><span class="va">vgm_model2</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/vgm_auc.html">vgm_auc</a></span><span class="op">(</span><span class="va">vgm_model2</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 494.7753</span></span>
-<span><span class="fu"><a href="reference/variogram_auc_compare.html">variogram_auc_compare</a></span><span class="op">(</span><span class="va">vgm_model1</span>, <span class="va">vgm_model2</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/vgm_compare.html">vgm_compare</a></span><span class="op">(</span><span class="va">vgm_model1</span>, <span class="va">vgm_model2</span>, maxdist <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0.733</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -104,6 +104,15 @@
 </h2>
 <p>The initial development of this R package was made possible through the financial support of the European Union’s Horizon Europe research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 101147446 and further supported by the Federal Ministry for Economic Affairs and Climate Action of Germany (project No. 50EE2009).</p>
 <p><img src="https://rea.ec.europa.eu/sites/default/files/styles/oe_theme_medium_2x_no_crop/public/2021-04/EN-Funded%20by%20the%20EU-POS.jpg?itok=Qx-y2s5d"></p>
+</div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<ul>
+<li>Kerry, R., &amp; Oliver, M. A. (2008). Determining nugget: sill ratios of standardized variograms from aerial photographs to krige sparse soil data. Precision Agriculture, 9(1), 33-56.</li>
+<li>Vaysse, K., &amp; Lagacherie, P. (2015). Evaluating digital soil mapping approaches for mapping GlobalSoilMap soil properties from legacy data in Languedoc-Roussillon (France). Geoderma Regional, 4, 20-30.</li>
+<li>Poggio, L., Lassauce, A., &amp; Gimona, A. (2019). Modelling the extent of northern peat soil and its uncertainty with sentinel: Scotland as example of highly cloudy region. Geoderma, 346, 63-74.</li>
+</ul>
 </div>
 </div>
   </div>
