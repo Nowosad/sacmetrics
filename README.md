@@ -33,7 +33,7 @@ library(gstat)
 vgm_model1 = vgm(psill = 2, model = "Sph", range = 100, nugget = 0.5)
 vgm_model2 = vgm(psill = 1.5, model = "Exp", range = 120, nugget = 0.7)
 plot(variogramLine(vgm_model1, maxdist = 300), type = "l", col = "blue",
-     xlab = "Distance", ylab = "Semivariance", main = "Variogram Models")
+     xlab = "Distance", ylab = "Semivariance")
 lines(variogramLine(vgm_model2, maxdist = 300), col = "red")
 ```
 

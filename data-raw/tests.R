@@ -25,15 +25,15 @@ fit_valid = gstat::fit.variogram(emp_valid, model = vgm_start)
 plot(emp_valid, fit_valid)
 
 # compute SSVR for fitted models
-ssvr_train = ssvr(fit_train)
+ssvr_train = vgm_ssvr(fit_train)
 ssvr_train
-ssvr_valid = ssvr(fit_valid)
+ssvr_valid = vgm_ssvr(fit_valid)
 ssvr_valid
 
 # compute AUC and similarity
-auc_train = variogram_auc(fit_train, maxdist = 1200)
+auc_train = vgm_auc(fit_train, maxdist = 1200)
 auc_train
-auc_valid = variogram_auc(fit_valid, maxdist = 1200)
+auc_valid = vgm_auc(fit_valid, maxdist = 1200)
 auc_valid
-auc_res = variogram_auc_compare(fit_train, fit_valid, maxdist = 1200)
+auc_res = vgm_compare(fit_train, fit_valid, maxdist = 1200)
 auc_res
