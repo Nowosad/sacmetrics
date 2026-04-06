@@ -8,8 +8,7 @@
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/sacmetrics)](https://CRAN.R-project.org/package=sacmetrics)
+<!-- [![CRAN status](https://www.r-pkg.org/badges/version/sacmetrics)](https://CRAN.R-project.org/package=sacmetrics) -->
 <!-- badges: end -->
 
 The goal of **sacmetrics** is to calculate spatial autocorrelation
@@ -37,7 +36,7 @@ plot(variogramLine(vgm_model1, maxdist = 300), type = "l", col = "blue",
 lines(variogramLine(vgm_model2, maxdist = 300), col = "red")
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" alt="" width="100%" />
 
 ``` r
 vgm_ssvr(vgm_model1)
@@ -67,8 +66,7 @@ through a GitHub pull request. Feel also free to contact us by creating
 The initial development of this R package was made possible through the
 financial support of the European Union’s Horizon Europe research and
 innovation programme under the Marie Skłodowska-Curie grant agreement
-No. 101147446 and further supported by the Federal Ministry for Economic
-Affairs and Climate Action of Germany (project No. 50EE2009).
+No. 101147446.
 
 ![](https://rea.ec.europa.eu/sites/default/files/styles/oe_theme_medium_2x_no_crop/public/2021-04/EN-Funded%20by%20the%20EU-POS.jpg?itok=Qx-y2s5d)
 
