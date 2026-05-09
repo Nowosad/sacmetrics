@@ -39,7 +39,8 @@ vl1 = gstat::variogramLine(m1, maxdist = 120) |>
 
 library(ggplot2)
 ggplot(vl1, aes(x = dist, y = gamma)) +
-  geom_line()
+  geom_line() +
+    ggplot2::theme_minimal()
 
 v2 = gstat::variogram(values ~ 1, p_list[[2]])
 m2 = gstat::fit.variogram(v2, vgm(model = "Sph"))
@@ -47,4 +48,5 @@ vl2 = gstat::variogramLine(m2, maxdist = 120) |>
       tibble::as_tibble()
 
 ggplot(vl2, aes(x = dist, y = gamma)) +
-  geom_line()
+  geom_line() +
+    ggplot2::theme_minimal()
