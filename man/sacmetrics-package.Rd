@@ -11,5 +11,10 @@ Calculated various spatial autocorrelation metrics. It includes Spatially Struct
 \author{
 \strong{Maintainer}: Jakub Nowosad \email{nowosad.jakub@gmail.com} (\href{https://orcid.org/0000-0002-1057-3721}{ORCID})
 
+Authors:
+\itemize{
+  \item Jakub Nowosad \email{nowosad.jakub@gmail.com} (\href{https://orcid.org/0000-0002-1057-3721}{ORCID})
+}
+
 }
 \keyword{internal}

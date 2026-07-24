@@ -10,6 +10,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/sacmetrics)](https://CRAN.R-project.org/package=sacmetrics)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21533807.svg)](https://doi.org/10.5281/zenodo.21533807)
 <!-- badges: end -->
 
 The goal of **sacmetrics** is to calculate spatial autocorrelation
@@ -37,7 +38,7 @@ plot(variogramLine(vgm_model1, maxdist = 300), type = "l", col = "blue",
 lines(variogramLine(vgm_model2, maxdist = 300), col = "red")
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" alt="" width="100%" />
 
 ``` r
 vgm_ssvr(vgm_model1)

@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/sacmetrics/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/sacmetrics)](https://CRAN.R-project.org/package=sacmetrics)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21533807.svg)](https://doi.org/10.5281/zenodo.21533807)
 <!-- badges: end -->
 
 The goal of **sacmetrics** is to calculate spatial autocorrelation metrics for spatial data.
